@@ -28,7 +28,7 @@
 
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="text" name="email" class="form-control" required value="<?php if (isset($_SESSION['email'])) echo $_SESSION['email'] ?>">
+                        <input type="email" name="email" class="form-control" required value="<?php if (isset($_SESSION['email'])) echo $_SESSION['email'] ?>">
                     </div>
 
                     <div class="form-group">
