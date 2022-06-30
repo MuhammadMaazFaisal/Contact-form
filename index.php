@@ -44,8 +44,9 @@
                     <div class="form-group">
                     <label for="description" class="form-label"><strong>Description</strong></label>
     		<div>
-    			<textarea name="description" id="editor" value="<?php if (isset($_SESSION['description'])) echo $_SESSION['description'] ?>">
-            		&lt;p&gt;Share your experienced.&lt;/p&gt;
+    			<textarea name="description" id="editor" placeholder="Description">
+                <?php if (isset($_SESSION['description'])) echo $_SESSION['description'] ?>
+            		
         		</textarea>
     		</div>
                     </div>

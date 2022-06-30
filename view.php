@@ -26,7 +26,7 @@ if ( isset($_POST['submit'])
         $name = $_SESSION['name'] = $_POST['name'];
         $email = $_SESSION['email'] = $_POST['email'];
         $issue = $_SESSION['issue'] = $_POST['issue'];
-        $description = $_POST['description'];
+        $description = $_SESSION['description'] = $_POST['description'];
     }
 ?>
 <div class="container">
