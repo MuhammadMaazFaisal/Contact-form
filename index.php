@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
     <title>Contact Form</title>
 </head>
 
@@ -41,15 +42,24 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="mb-3">
-                            <label for="description" class="form-label">Description</label>
-                            <textarea class="form-control" id="description" name="description" rows="3"><?php if (isset($_SESSION['description'])) echo $_SESSION['description'] ?></textarea>
-                        </div>
+                    <label for="description" class="form-label"><strong>Description</strong></label>
+    		<div>
+    			<textarea name="description" id="editor" value="<?php if (isset($_SESSION['description'])) echo $_SESSION['description'] ?>">
+            		&lt;p&gt;Share your experienced.&lt;/p&gt;
+        		</textarea>
+    		</div>
                     </div>
                     <div class="d-flex justify-content-end mr-4">
                     <button type="submit" name="submit" class="btn btn-primary px-3">Submit</button>
                     </div>
                 </form>
+                <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
             </div>
         </div>
     </div>
