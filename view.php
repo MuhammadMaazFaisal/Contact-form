@@ -30,7 +30,7 @@ if ( isset($_POST['submit'])
     }
 ?>
 <div class="container">
-    <div class="card-header my-5">
+    <div class="card-header my-5 bg-success text-light">
         <h3>Your information: </h3>
     </div>
     <div class="card-body">
@@ -55,8 +55,10 @@ if ( isset($_POST['submit'])
             </tbody>
         </table>
     </div>
+    
     <div class="d-flex justify-content-end mr-4">
-    <a class="btn btn-primary px-4" href="changes.php" role="button">Edit</a>
+    <a class="btn btn-primary px-4 mx-3" href="changes.php" role="button">Edit</a>
+    <a class="btn btn-primary px-4" href="insert.php" role="button">Confirm</a>
     </div>
 </div>
 
